@@ -10,7 +10,7 @@ typedef struct node
 /*
  * Erstellt neuen node fuer verkettete Listen
  */
-node* create_new_node( char* a_forename, char* a_surname );
+node* create_new_node( char** a_forename, char** a_surname );
 
 /*
  * Fuegt node in sortierte Liste ein
