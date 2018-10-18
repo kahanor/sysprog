@@ -6,4 +6,4 @@ DEPS = list.h
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 name-list: list.o NameList.o
-	$(CC) -o name-list.out list.o NameList.o -I .
+	$(CC) -o name-list.out list.o NameList.o $(CFLAGS)
