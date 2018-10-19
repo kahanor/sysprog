@@ -14,13 +14,13 @@ node* insert(node* head, char* forename, char* surname) {
 	if (!head) 
 		return newNode;
 	
-	if (strcmp(surname, head->surname) >= 0) {
+	if (strcmp(surname, head->surname) < 0) {
 		newNode->succ = head;
 		return newNode;
 	}
 
 	node* index = head;
-	while(index->succ && strcmp(surname, index->succ->surname) < 0) {
+	while(index->succ && strcmp(surname, index->succ->surname) > 0) {
 		index = index->succ;
 	}
 
