@@ -1,9 +1,10 @@
 CC=gcc
-CFLAGS=-I .
+CFLAGS=-g -Wall -I .
+OBJECTS=NameList.o lsit.o
 DEPS = list.h
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-name-list: list.o NameList.o
-	$(CC) -o name-list.out list.o NameList.o $(CFLAGS)
+name-list: $(OBJECTS)
+	$(CC) -o name-list.out $(CFLAGS) $(OBJECTS)
